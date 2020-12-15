@@ -1,15 +1,15 @@
 print('----------------------------------------')
 print('Welcome to the app. Please log in:')
 TEXTS_1 = '''
-Situated about 10 miles west of Kemmerer , 
+Situated about 10 miles west of Kemmerer, 
 Fossil Butte is a ruggedly impressive 
 topographic feature that rises sharply 
 some 1000 feet above Twin Creek Valley 
 to an elevation of more than 7500 feet 
 above sea level. The butte is located just 
 north of US 30N and the Union Pacific Railroad, 
-which traverse the valley . '''.split()
-seznam_1 = ""
+which traverse the valley. '''.split()
+seznam_1 = "" # pro vyčistění od nežádoucích znaků
 for slovo_1 in TEXTS_1:
     slovo_1 = slovo_1.strip('.,')
     seznam_1 = seznam_1 + " " + slovo_1
@@ -17,16 +17,16 @@ for slovo_1 in TEXTS_1:
 seznam_1 = seznam_1.split()
 
 TEXTS_2 = '''At the base of Fossil Butte are the bright 
-red, purple , yellow and gray beds of the Wasatch 
-Formation . Eroded portions of these horizontal 
+red, purple, yellow and gray beds of the Wasatch 
+Formation. Eroded portions of these horizontal 
 beds slope gradually upward from the valley floor 
-and steepen abruptly . Overlying them and extending 
+and steepen abruptly. Overlying them and extending 
 to the top of the butte are the much steeper 
 buff-to-white beds of the Green River Formation, 
-which are about 300 feet thick .'''.split()
-seznam_2 = ""
+which are about 300 feet thick.'''.split()
+seznam_2 = "" # pro vyčistění od nežádoucích znaků
 for slovo_2 in TEXTS_2:
-    slovo_2 = slovo_2.strip('.,')
+    slovo_2 = slovo_2.strip('.,-')
     seznam_2 = seznam_2 + " " + slovo_2
     continue
 seznam_2 = seznam_2.split()
@@ -34,13 +34,13 @@ seznam_2 = seznam_2.split()
 TEXTS_3 = '''The monument contains 8198 acres and protects 
 a portion of the largest deposit of freshwater fish 
 fossils in the world. The richest fossil fish deposits 
-are found in multiple limestone layers , which lie some 
-100 feet below the top of the butte . The fossils 
+are found in multiple limestone layers, which lie some 
+100 feet below the top of the butte. The fossils 
 represent several varieties of perch, as well as 
 other freshwater genera and herring similar to those 
 in modern oceans. Other fish such as paddlefish, 
-garpike and stingray are also present .'''.split()
-seznam_3 = ""
+garpike and stingray are also present.'''.split()
+seznam_3 = "" # pro vyčistění od nežádoucích znaků
 for slovo_3 in TEXTS_3:
     slovo_3 = slovo_3.strip('.,')
     seznam_3 = seznam_3 + " " + slovo_3
@@ -100,7 +100,7 @@ if login in database.keys():  # prohledává jestli existuje uživatel
             print('If we summed all the numbers in this text we would get: ', suma)  # vypisujeme součet čísel
             print('----------------------------------------')
         if text_value == '2':  # slouží pro výběr článku 2
-            texts_1a = seznam_2  # umožní jednoduše překopírovat kód od řádku 42 do řádku 83
+            texts_1a = seznam_2  # umožní jednoduše překopírovat kód od řádku 60 do řádku 101
             count_0 = len(texts_1a)
             count_1 = 0
             count_2 = 0
@@ -144,7 +144,7 @@ if login in database.keys():  # prohledává jestli existuje uživatel
             print('If we summed all the numbers in this text we would get: ', suma)
             print('----------------------------------------')
         if text_value == '3':  # slouží pro výběr článku 3
-            texts_1a = seznam_3  # umožní jednoduše překopírovat kód od řádku 42 do řádku 83
+            texts_1a = seznam_3  # umožní jednoduše překopírovat kód od řádku 60 do řádku 101
             count_0 = len(texts_1a)
             count_1 = 0
             count_2 = 0
@@ -187,8 +187,8 @@ if login in database.keys():  # prohledává jestli existuje uživatel
                 continue
             print('If we summed all the numbers in this text we would get: ', suma)
             print('----------------------------------------')
-        if text_value != '3' or text_value != '2' or text_value != '1':
-            print('Wrong article number')
+        if text_value != '3' and text_value != '2' and text_value != '1':
+            print('Wrong article number') # článek je neplatný
     else:
         print('Password is incorrect')  # heslo je neplatné
 else:
