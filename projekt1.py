@@ -8,7 +8,7 @@ some 1000 feet above Twin Creek Valley
 to an elevation of more than 7500 feet 
 above sea level. The butte is located just 
 north of US 30N and the Union Pacific Railroad, 
-which traverse the valley. '''.split()
+which traverse the valley. '''.split() # rozděluje článek na slova
 seznam_1 = "" # pro vyčistění od nežádoucích znaků
 for slovo_1 in TEXTS_1:
     slovo_1 = slovo_1.strip('.,')
@@ -56,7 +56,7 @@ if login in database.keys():  # prohledává jestli existuje uživatel
         text_value = input('Enter a number btw. 1 and 3 to select: ')
         print('----------------------------------------')
         if text_value == '1':  # slouží pro výběr článku 1
-            texts_1a = seznam_1 # slouží pro to, aby kód šel jednoduše překopírovat pod další podmínky, rozděluje vybraný článek na slova
+            texts_1a = seznam_1 # slouží pro to, aby kód šel jednoduše překopírovat pod další podmínky
             count_0 = len(texts_1a)  # vrací počet slov
             count_1 = 0  # proměnná pro počet slov začínající velkým písmenem
             count_2 = 0  # proměnná pro počet slov napsaných velkým písmem
